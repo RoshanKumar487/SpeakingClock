@@ -54,8 +54,5 @@ class SpeakingClockApplicationTests {
         assertEquals(expectedOutput, actualOutput);
     }
 
-    // Add more test cases for different scenarios
-
-    // ...
-
+   
 }
