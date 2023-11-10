@@ -7,6 +7,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
@@ -25,7 +27,7 @@ class SpeakingClockApplicationTests {
 
         Mockito.when(clockService.convertToWords(Mockito.anyString())).thenReturn(expectedOutput);
 
-        String actualOutput = clockController.convertTimeToWords(inputTime);
+        ResponseEntity<String> actualOutput = clockController.convertTimeToWords(inputTime);
 
         assertEquals(expectedOutput, actualOutput);
     }
@@ -37,7 +39,7 @@ class SpeakingClockApplicationTests {
 
         Mockito.when(clockService.convertToWords(Mockito.anyString())).thenReturn(expectedOutput);
 
-        String actualOutput = clockController.convertTimeToWords(inputTime);
+        ResponseEntity<String> actualOutput = clockController.convertTimeToWords(inputTime);
 
         assertEquals(expectedOutput, actualOutput);
     }
@@ -49,7 +51,7 @@ class SpeakingClockApplicationTests {
 
         Mockito.when(clockService.convertToWords(Mockito.anyString())).thenReturn(expectedOutput);
 
-        String actualOutput = clockController.convertTimeToWords(inputTime);
+        ResponseEntity<String> actualOutput = clockController.convertTimeToWords(inputTime);
 
         assertEquals(expectedOutput, actualOutput);
     }
